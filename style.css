@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 18px;
+    color: hsl(215, 51%, 70%);
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);
+    max-width: 375px;
+    margin: 2rem auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    padding: 1.5rem;
+
+    background-color: hsl(216, 50%, 16%);
+}
+
+body, .flex-container  {
+    border-radius: 2rem;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container > img {
+    display: block;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    
+    height: 100%;
+    width: 100%;
+
+    border-radius: 1rem;
+    background: hsla(178, 100%, 50%, 0.5);
+
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.img-container:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 2rem; 
+
+    color: hsl(0, 0%, 100%);
+}
+
+
+.NFT-Info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+    padding-bottom: 1rem;
+}
+
+.Price-and-Days {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.Price, .Days {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.Price-and-Days div:first-of-type {
+    color: hsl(178, 100%, 50%);
+}
+
+.Price-and-Days img {
+    height: 23px;
+}
+
+.text-white {
+    color: hsl(0, 0%, 100%)
+}
+
+.text-white:hover {
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+}
+
+footer {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    margin-top: -0.5rem;
+}
+
+footer img {
+    max-height: 2.5rem;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+}
+
+footer div {
+    flex-grow: 1;
+}
+
+footer p {
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        align-items: center;
+
+        min-height: 100vh;
+    }
+}
